@@ -1,0 +1,50 @@
+<html t:type="layout" title="scrooge Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+
+<body>
+<div>
+    <h1> GAME ID : ${gameId} </h1>
+    <hr/>
+    <h2> ${Player1} : ${balPlayer1} </h2>
+    <hr/>
+    <h2> ${Player2} : ${balPlayer2} </h2>
+    <hr/>
+    <h2> ${Player3} : ${balPlayer3} </h2>
+    <hr/>
+    <h2> ${Player4} : ${balPlayer4} </h2>
+    <hr/>
+    <h2> Banker : ${BalBanker} </h2>
+    <hr/>
+    <t:if test="PageHasError">
+        <h2>
+            <b>
+                <i>
+                    Transaction Failed!
+                    Check the players balance. It might be low
+                </i>
+            </b>
+        </h2>
+</t:if>
+    <t:form t:id="transact">
+        <em>Transfer <br/>
+        <t:textfield t:id="amount"/>
+            <br/>From <br/>
+        <t:select t:id="from" model="players"/>
+            <br/>To <br/>
+        <t:select t:id="to" model="players"/>
+        </em>
+        <br/>
+        <t:submit value="Transact"/>
+    </t:form>
+    <hr/>
+    <em>
+        <ul>
+            <li>${n0transaction}</li>
+        </ul>
+    </em>
+
+
+</div>
+</body>
+
+</html>

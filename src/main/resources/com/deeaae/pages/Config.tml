@@ -1,0 +1,9 @@
+<html t:type="layout" title="scrooge Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+>
+
+<em>Coming soon ... </em>
+<t:beaneditform object="gameConfig" submitLabel="Lets Play" reorder="BankInitialAmount,PlayerInitialAmount,bankCred"/>
+
+
+</html>

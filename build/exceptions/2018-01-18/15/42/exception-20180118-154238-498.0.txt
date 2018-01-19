@@ -1,0 +1,176 @@
+EXCEPTION STACK:
+
+
+  Exception: org.apache.tapestry5.runtime.ComponentEventException
+    Message: 
+    context: org.apache.tapestry5.internal.EmptyEventContext@4625e204
+  eventType: action
+   location: classpath:com/deeaae/pages/GamePage.tml, line 28
+
+  Exception: org.apache.tapestry5.ioc.internal.OperationException
+    Message: 
+   location: classpath:com/deeaae/pages/GamePage.tml, line 28
+      trace: Handling traditional 'action' component event request for Game:transact.
+             Triggering event 'action' on Game:transact
+             Triggering event 'validate' on Game:transact
+
+  Exception: org.apache.tapestry5.runtime.ComponentEventException
+    Message: 
+    context: org.apache.tapestry5.internal.EmptyEventContext@4625e204
+  eventType: validate
+   location: classpath:com/deeaae/pages/GamePage.tml, line 28
+
+  Exception: java.lang.NullPointerException
+    Message: 
+
+  Stack trace:
+
+  - com.deeaae.pages.GamePage.onValidateFromTransact(GamePage.java:87)
+  - com.deeaae.pages.GamePage.dispatchComponentEvent(GamePage.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:917)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1102)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:57)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1047)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:154)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1043)
+  - org.apache.tapestry5.internal.structure.InternalComponentResourcesImpl.triggerContextEvent(InternalComponentResourcesImpl.java:288)
+  - org.apache.tapestry5.corelib.components.Form.fireValidateEvent(Form.java:673)
+  - org.apache.tapestry5.corelib.components.Form.onAction(Form.java:522)
+  - org.apache.tapestry5.corelib.components.Form.dispatchComponentEvent(Form.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:917)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1102)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:57)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1047)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:154)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1043)
+  - org.apache.tapestry5.internal.services.ComponentEventRequestHandlerImpl.handle(ComponentEventRequestHandlerImpl.java:73)
+  - org.apache.tapestry5.internal.services.AjaxFilter.handle(AjaxFilter.java:42)
+  - $ComponentEventRequestHandler_6e6e86d2d2b5.handle(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$37.handle(TapestryModule.java:2216)
+  - $ComponentEventRequestHandler_6e6e86d2d2b5.handle(Unknown Source)
+  - $ComponentEventRequestHandler_6e6e86d2d2ae.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handleComponentEvent(ComponentRequestHandlerTerminator.java:43)
+  - org.apache.tapestry5.internal.services.DeferredResponseRenderer.handleComponentEvent(DeferredResponseRenderer.java:45)
+  - $ComponentRequestHandler_6e6e86d2d2b0.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.services.InitializeActivePageName.handleComponentEvent(InitializeActivePageName.java:39)
+  - $ComponentRequestHandler_6e6e86d2d2b0.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:55)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:52)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.perform(OperationTrackerImpl.java:110)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.perform(PerThreadOperationTracker.java:84)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.perform(RegistryImpl.java:1266)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker.handleComponentEvent(RequestOperationTracker.java:47)
+  - $ComponentRequestHandler_6e6e86d2d2b0.handleComponentEvent(Unknown Source)
+  - $ComponentRequestHandler_6e6e86d2d261.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentEventDispatcher.dispatch(ComponentEventDispatcher.java:48)
+  - $Dispatcher_6e6e86d2d263.dispatch(Unknown Source)
+  - $Dispatcher_6e6e86d2d257.dispatch(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$RequestHandlerTerminator.service(TapestryModule.java:305)
+  - org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:26)
+  - $RequestHandler_6e6e86d2d258.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$3.service(TapestryModule.java:846)
+  - $RequestHandler_6e6e86d2d258.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:836)
+  - $RequestHandler_6e6e86d2d258.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+  - $RequestHandler_6e6e86d2d258.service(Unknown Source)
+  - com.deeaae.services.AppModule$1.service(AppModule.java:113)
+  - $RequestFilter_6e6e86d2d253.service(Unknown Source)
+  - $RequestHandler_6e6e86d2d258.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:105)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:95)
+  - org.apache.tapestry5.ioc.internal.util.ConcurrentBarrier.withRead(ConcurrentBarrier.java:83)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter.service(CheckForUpdatesFilter.java:119)
+  - $RequestHandler_6e6e86d2d258.service(Unknown Source)
+  - $RequestHandler_6e6e86d2d24d.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$HttpServletRequestHandlerTerminator.service(TapestryModule.java:256)
+  - org.apache.tapestry5.internal.gzip.GZipFilter.service(GZipFilter.java:59)
+  - $HttpServletRequestHandler_6e6e86d2d24f.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:62)
+  - $HttpServletRequestFilter_6e6e86d2d24a.service(Unknown Source)
+  - $HttpServletRequestHandler_6e6e86d2d24f.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:796)
+  - $HttpServletRequestHandler_6e6e86d2d24f.service(Unknown Source)
+  - $HttpServletRequestHandler_6e6e86d2d249.service(Unknown Source)
+  - org.apache.tapestry5.TapestryFilter.doFilter(TapestryFilter.java:166)
+  - org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1148)
+  - org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:387)
+  - org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+  - org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+  - org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+  - org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417)
+  - org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+  - org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+  - org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+  - org.mortbay.jetty.Server.handle(Server.java:324)
+  - org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+  - org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:880)
+  - org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:747)
+  - org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+  - org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+  - org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+  - org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
+
+REQUEST:
+
+Basic Information:
+
+                contextPath: /scrooge
+                     method: POST
+                       path: /game.transact
+                     locale: en_US
+                 serverName: localhost
+                 remoteHost: 0:0:0:0:0:0:0:1
+
+Headers:
+
+                     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-US,en;q=0.9
+              Cache-Control: max-age=0
+                 Connection: keep-alive
+             Content-Length: 567
+               Content-Type: application/x-www-form-urlencoded
+                     Cookie: JSESSIONID=1axgv2zbwji0q; LithiumVisitor=~2lZP14R4179gBGkMa~lFKODwSwjnOJm56BMjw39BfsyqbtpS7tI8mDGKwzCSoI5v407z2SH44EpyMRX-lVVLjEJiRoUVWv1fw4Dags_w..; VISITOR_BEACON=~2fMQs8opHESTxD9cc~yuE-b66W8-xQViL1IDaFp1U-hthOcXNAyHQlSB-HQlabTRSQ8SaDeF6ahJ3KV5CAgb4oV-8Jdo69Ge4qCTvoJQ..
+                       Host: localhost:8181
+                     Origin: http://localhost:8181
+                    Referer: http://localhost:8181/scrooge/game/1
+  Upgrade-Insecure-Requests: 1
+                 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+
+Parameters:
+                     amount: 10
+                       from: Anunay
+                   submit_0: Transact
+                 t:formdata: vPdRRuoabf0xS83DB+MOWuyD4Zo=:H4sIAAAAAAAAAJWQvy4FQRTGj43LZUUhUehp5yrchsaNhEg2ItmoZXZ27hqZf2bO2qtReQmNJxAVT3ALnXfwABqFSmFnN+QKkejO+c6X8/3y3b5Ap1qEeI8qvkmVKTWCd9A3riDUUnbCCVLLPbqLPmHGcSkyklHPySCrRcpwV3CZr6YcS7t2NI6flx/fI5hKIGZGozPyoP6MsJSc0nPak1QXvRSd0MXWyCLMtJG/EAz+S3DoDOPep2WmhPfC6PFdvjF8u3mKAEa2WoC5JmHojAJ/BpcACNNh+34Kl041D7ONhObLG6GZlFvfJ7cPqQ339p/czChrNNfoSQOKP7Gv09eVh/urnQiiBLpMitq9n4e4UCqXXNVCKLWRQondNv14fWL8ANXDtwbYAQAA
+                   t:submit: ["submit_0","submit_0"]
+                         to: Tanmay
+
+SYSTEM INFORMATION:
+
+Memory:
+      284,784,984 bytes free
+      366,477,312 bytes total
+    3,817,865,216 bytes max
+
+12 Threads:
+                                                           Reference Handler WAITING, daemon, priority 10
+                                                                   Finalizer WAITING, daemon, priority 8
+                                                           Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                                        main WAITING
+                                                   255156436@qtp-576902869-0 TIMED_WAITING
+  1000592566@qtp-576902869-1 - Acceptor0 SelectChannelConnector@0.0.0.0:8181 RUNNABLE
+                                                                     Timer-0 TIMED_WAITING, daemon
+                                                  1704626678@qtp-576902869-2 TIMED_WAITING
+                                                  1928668236@qtp-576902869-3 TIMED_WAITING
+                                                  1023604380@qtp-576902869-4 TIMED_WAITING
+                                                  2008656993@qtp-576902869-5 TIMED_WAITING
+*                                                 1682373710@qtp-576902869-7 RUNNABLE

@@ -1,0 +1,165 @@
+EXCEPTION STACK:
+
+
+        Exception: org.apache.tapestry5.ioc.internal.OperationException
+          Message: Exception assembling root component of page Game: Unable to instantiate instance of transformed class com.deeaae.pages.GamePage: java.lang.reflect.InvocationTargetException
+            trace: Handling page render request for page Game
+                   Constructing instance of page class com.deeaae.pages.GamePage
+                   Assembling root component for page Game
+
+        Exception: java.lang.RuntimeException
+          Message: Exception assembling root component of page Game: Unable to instantiate instance of transformed class com.deeaae.pages.GamePage: java.lang.reflect.InvocationTargetException
+
+        Exception: java.lang.reflect.InvocationTargetException
+          Message: 
+  targetException: org.apache.tapestry5.ioc.internal.util.TapestryException: Error persisting field Game:isError: Persistent fields may not be updated until after the page has finished loading. This may be due to a persistent field with a default value. The default value should be removed.
+
+        Exception: org.apache.tapestry5.ioc.internal.util.TapestryException
+          Message: Error persisting field Game:isError: Persistent fields may not be updated until after the page has finished loading. This may be due to a persistent field with a default value. The default value should be removed.
+
+        Exception: java.lang.RuntimeException
+          Message: Persistent fields may not be updated until after the page has finished loading. This may be due to a persistent field with a default value. The default value should be removed.
+
+  Stack trace:
+
+  - org.apache.tapestry5.internal.structure.PageImpl.persistFieldChange(PageImpl.java:263)
+  - org.apache.tapestry5.internal.structure.InternalComponentResourcesImpl.persistFieldChange(InternalComponentResourcesImpl.java:310)
+  - org.apache.tapestry5.internal.transform.PersistWorker$PersistentFieldConduit.set(PersistWorker.java:64)
+  - com.deeaae.pages.GamePage.conduit_set_isError(GamePage.java)
+  - com.deeaae.pages.GamePage.initializeInstance(GamePage.java:46)
+  - com.deeaae.pages.GamePage.<init>(GamePage.java)
+  - sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  - sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  - sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  - java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  - org.apache.tapestry5.internal.plastic.ClassInstantiatorImpl.newInstance(ClassInstantiatorImpl.java:109)
+  - org.apache.tapestry5.internal.services.ComponentInstantiatorSourceImpl$2$1.newInstance(ComponentInstantiatorSourceImpl.java:236)
+  - org.apache.tapestry5.internal.structure.InternalComponentResourcesImpl.<init>(InternalComponentResourcesImpl.java:161)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.<init>(ComponentPageElementImpl.java:553)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.<init>(ComponentPageElementImpl.java:577)
+  - org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl.performAssembleRootComponent(ComponentAssemblerImpl.java:97)
+  - org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl.access$000(ComponentAssemblerImpl.java:37)
+  - org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl$1.invoke(ComponentAssemblerImpl.java:81)
+  - org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl$1.invoke(ComponentAssemblerImpl.java:78)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.pageload.ComponentAssemblerImpl.assembleRootComponent(ComponentAssemblerImpl.java:76)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl$3.invoke(PageLoaderImpl.java:197)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl$3.invoke(PageLoaderImpl.java:190)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.pageload.PageLoaderImpl.loadPage(PageLoaderImpl.java:189)
+  - $PageLoader_6ba2e4a6340e.loadPage(Unknown Source)
+  - org.apache.tapestry5.internal.services.PageSourceImpl.getPage(PageSourceImpl.java:104)
+  - $PageSource_6ba2e4a6340d.getPage(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestPageCacheImpl.get(RequestPageCacheImpl.java:86)
+  - $RequestPageCache_6ba2e4a6340c.get(Unknown Source)
+  - $RequestPageCache_6ba2e4a63407.get(Unknown Source)
+  - org.apache.tapestry5.internal.services.PageRenderRequestHandlerImpl.handle(PageRenderRequestHandlerImpl.java:56)
+  - org.apache.tapestry5.modules.TapestryModule$34.handle(TapestryModule.java:1974)
+  - $PageRenderRequestHandler_6ba2e4a6340b.handle(Unknown Source)
+  - $PageRenderRequestHandler_6ba2e4a63405.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handlePageRender(ComponentRequestHandlerTerminator.java:48)
+  - org.apache.tapestry5.internal.services.DeferredResponseRenderer.handlePageRender(DeferredResponseRenderer.java:52)
+  - $ComponentRequestHandler_6ba2e4a63406.handlePageRender(Unknown Source)
+  - org.apache.tapestry5.services.InitializeActivePageName.handlePageRender(InitializeActivePageName.java:47)
+  - $ComponentRequestHandler_6ba2e4a63406.handlePageRender(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$2.run(RequestOperationTracker.java:73)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.run(OperationTrackerImpl.java:56)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.run(PerThreadOperationTracker.java:60)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.run(RegistryImpl.java:1254)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker.handlePageRender(RequestOperationTracker.java:66)
+  - $ComponentRequestHandler_6ba2e4a63406.handlePageRender(Unknown Source)
+  - $ComponentRequestHandler_6ba2e4a633d3.handlePageRender(Unknown Source)
+  - org.apache.tapestry5.internal.services.PageRenderDispatcher.dispatch(PageRenderDispatcher.java:55)
+  - $Dispatcher_6ba2e4a633d5.dispatch(Unknown Source)
+  - $Dispatcher_6ba2e4a633ca.dispatch(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$RequestHandlerTerminator.service(TapestryModule.java:305)
+  - org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:26)
+  - $RequestHandler_6ba2e4a633cb.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$3.service(TapestryModule.java:846)
+  - $RequestHandler_6ba2e4a633cb.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:836)
+  - $RequestHandler_6ba2e4a633cb.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+  - $RequestHandler_6ba2e4a633cb.service(Unknown Source)
+  - com.deeaae.services.AppModule$1.service(AppModule.java:113)
+  - $RequestFilter_6ba2e4a633c6.service(Unknown Source)
+  - $RequestHandler_6ba2e4a633cb.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:105)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:95)
+  - org.apache.tapestry5.ioc.internal.util.ConcurrentBarrier.withRead(ConcurrentBarrier.java:83)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter.service(CheckForUpdatesFilter.java:119)
+  - $RequestHandler_6ba2e4a633cb.service(Unknown Source)
+  - $RequestHandler_6ba2e4a633c0.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$HttpServletRequestHandlerTerminator.service(TapestryModule.java:256)
+  - org.apache.tapestry5.internal.gzip.GZipFilter.service(GZipFilter.java:59)
+  - $HttpServletRequestHandler_6ba2e4a633c2.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:62)
+  - $HttpServletRequestFilter_6ba2e4a633bd.service(Unknown Source)
+  - $HttpServletRequestHandler_6ba2e4a633c2.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:796)
+  - $HttpServletRequestHandler_6ba2e4a633c2.service(Unknown Source)
+  - $HttpServletRequestHandler_6ba2e4a633bc.service(Unknown Source)
+  - org.apache.tapestry5.TapestryFilter.doFilter(TapestryFilter.java:166)
+  - org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1148)
+  - org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:387)
+  - org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+  - org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+  - org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+  - org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417)
+  - org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+  - org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+  - org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+  - org.mortbay.jetty.Server.handle(Server.java:324)
+  - org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+  - org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:865)
+  - org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:539)
+  - org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+  - org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+  - org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+  - org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
+
+REQUEST:
+
+Basic Information:
+
+                contextPath: /scrooge
+                     method: GET
+                       path: /game/1
+                     locale: en_US
+                 serverName: localhost
+                 remoteHost: 0:0:0:0:0:0:0:1
+
+Headers:
+
+                     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-US,en;q=0.9
+              Cache-Control: max-age=0
+                 Connection: keep-alive
+                     Cookie: JSESSIONID=1n9238j60fbvb; LithiumVisitor=~2lZP14R4179gBGkMa~lFKODwSwjnOJm56BMjw39BfsyqbtpS7tI8mDGKwzCSoI5v407z2SH44EpyMRX-lVVLjEJiRoUVWv1fw4Dags_w..; VISITOR_BEACON=~2fMQs8opHESTxD9cc~yuE-b66W8-xQViL1IDaFp1U-hthOcXNAyHQlSB-HQlabTRSQ8SaDeF6ahJ3KV5CAgb4oV-8Jdo69Ge4qCTvoJQ..
+                       Host: localhost:8181
+  Upgrade-Insecure-Requests: 1
+                 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+
+SYSTEM INFORMATION:
+
+Memory:
+      288,969,736 bytes free
+      365,953,024 bytes total
+    3,817,865,216 bytes max
+
+10 Threads:
+                                                            Reference Handler WAITING, daemon, priority 10
+                                                                    Finalizer WAITING, daemon, priority 8
+                                                            Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                                         main WAITING
+                                                  1234654510@qtp-2061552777-0 TIMED_WAITING
+  2077150966@qtp-2061552777-1 - Acceptor0 SelectChannelConnector@0.0.0.0:8181 RUNNABLE
+                                                                      Timer-0 TIMED_WAITING, daemon
+*                                                 1761065248@qtp-2061552777-3 RUNNABLE
+                                                   757740323@qtp-2061552777-4 TIMED_WAITING
+                                                   576586134@qtp-2061552777-5 TIMED_WAITING

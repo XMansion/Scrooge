@@ -1,0 +1,21 @@
+<html t:type="layout" title="scrooge Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+        >
+
+    <body>
+        <h1>Monoply Money Manager</h1>
+        <t:if test="errorOnPage">
+            <h1>Error</h1>
+            <em><b>${errorMsg}</b></em>
+        </t:if>
+        <t:form t:id="start">
+            <br/>
+            <h2>Enter Game Id (Or leave it as is (i.e 0) to start a new game)</h2>
+            <br/>
+            <t:textfield t:id="gameId"/>
+            <br/>
+            <t:submit value="Let's Play"/>
+        </t:form>
+    </body>
+
+</html>
